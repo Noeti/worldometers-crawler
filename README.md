@@ -1,8 +1,9 @@
 # Worldometers website crawler
-The project contains three spiders:
+The project contains four spiders:
 * [population](https://www.worldometers.info/world-population/population-by-country/): scrapes population data by country and year.
 * [energy](https://www.worldometers.info/energy/): scrapes energy consumption by country.
 * fossil_fuel ([Oil](https://www.worldometers.info/oil/), [Natual Gas](https://www.worldometers.info/gas/), [Coal](https://www.worldometers.info/coal/)): scrapes energy data by fossil fuel type and country.
+* [Co2 emissions](https://www.worldometers.info/co2-emissions/): scrapes carbon dioxide emissions by country.
 
 ## Usage:
 
@@ -15,7 +16,10 @@ The project contains three spiders:
 * **Example for fuel_type = oil spider** (same for gas and coal):
 
   `scrapy crawl fossil_fuel  -a category=oil -o oil_dataset.json`
+* **co2_emissions.py spider**: 
 
+  `scrapy crawl co2_emissions -o co2_emissions_dataset.json`
+  
 ## Notes:
 * **clean_dataset.ipynb**: 
 
