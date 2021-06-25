@@ -2,13 +2,13 @@ import scrapy
 from ..utils import *
 import json
 
-class CoalSpider(scrapy.Spider):
+class FossilfuelSpider(scrapy.Spider):
     name = 'fossil_fuel'
     allowed_domains = ['www.worldometers.info']
     start_urls = ['https://www.worldometers.info/energy']
 
     def __init__(self, category=None, *args, **kwargs):
-        super(CoalSpider, self).__init__(*args, **kwargs)
+        super(FossilfuelSpider, self).__init__(*args, **kwargs)
         self.fuel_type = f"{category}"
     
     def parse(self, response):
